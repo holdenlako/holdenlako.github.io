@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Google Structured Data (JSON-LD) for Knowledge Graph -->
+    <!-- Google Structured Data (JSON-LD) for Knowledge Graph Entity -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,13 +46,13 @@
             --bg: #070c14;
             --card-bg: rgba(15, 23, 42, 0.75);
             --card-border: rgba(56, 189, 248, 0.15);
-            --card-hover-border: rgba(56, 189, 248, 0.45);
+            --card-hover-border: rgba(56, 189, 248, 0.55);
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --accent-cyan: #38bdf8;
             --accent-blue: #2563eb;
             --accent-emerald: #10b981;
-            --glow: rgba(56, 189, 248, 0.15);
+            --glow: rgba(56, 189, 248, 0.18);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -152,6 +152,15 @@
             margin-top: 4px;
         }
 
+        .hero-title-group .affiliation a {
+            color: #cbd5e1;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+        }
+        .hero-title-group .affiliation a:hover {
+            color: var(--accent-cyan);
+        }
+
         .contact-pills {
             display: flex;
             flex-wrap: wrap;
@@ -215,7 +224,7 @@
             line-height: 1.7;
         }
 
-        /* Identifiers Grid */
+        /* Identifiers Grid - ALL CLICKABLE */
         .identifiers-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -233,14 +242,15 @@
             flex-direction: column;
             justify-content: space-between;
             position: relative;
-            overflow: hidden;
             text-decoration: none;
+            cursor: pointer;
         }
 
         .id-card:hover {
             transform: translateY(-4px);
             border-color: var(--card-hover-border);
             box-shadow: 0 12px 30px -10px var(--glow);
+            background: rgba(22, 34, 60, 0.85);
         }
 
         .id-header {
@@ -254,6 +264,9 @@
             font-size: 0.95rem;
             font-weight: 600;
             color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .id-tag {
@@ -273,6 +286,10 @@
             word-break: break-all;
         }
 
+        .id-card:hover .id-value {
+            color: #e2e8f0;
+        }
+
         /* Publications Card */
         .pub-card {
             background: var(--card-bg);
@@ -287,7 +304,7 @@
 
         .pub-card:hover {
             border-color: var(--card-hover-border);
-            box-shadow: 0 12px 35px -8px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 12px 35px -8px rgba(37, 99, 235, 0.25);
         }
 
         .pub-meta-top {
@@ -337,7 +354,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 18px;
+            padding: 9px 20px;
             border-radius: 6px;
             font-size: 0.85rem;
             font-weight: 600;
@@ -355,6 +372,7 @@
         .btn-primary:hover {
             background: #1d4ed8;
             box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+            transform: translateY(-2px);
         }
 
         .btn-outline {
@@ -368,32 +386,41 @@
             color: #fff;
         }
 
-        /* Affiliations List */
+        /* Affiliations Grid - ALL CLICKABLE */
         .affil-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 14px;
         }
 
+        .affil-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         .affil-item {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 10px;
-            padding: 16px 20px;
+            padding: 18px 20px;
             display: flex;
             align-items: center;
             gap: 14px;
-            transition: transform 0.2s ease;
+            transition: all 0.25s ease;
+            height: 100%;
         }
 
-        .affil-item:hover {
+        .affil-link:hover .affil-item {
             transform: translateX(4px);
-            border-color: rgba(56, 189, 248, 0.3);
+            border-color: var(--card-hover-border);
+            background: rgba(22, 34, 60, 0.85);
+            box-shadow: 0 8px 24px -6px var(--glow);
         }
 
         .affil-icon {
-            width: 38px;
-            height: 38px;
+            width: 42px;
+            height: 42px;
             border-radius: 8px;
             background: rgba(56, 189, 248, 0.1);
             display: flex;
@@ -401,17 +428,34 @@
             justify-content: center;
             color: var(--accent-cyan);
             flex-shrink: 0;
+            transition: all 0.2s ease;
+        }
+
+        .affil-link:hover .affil-icon {
+            background: var(--accent-blue);
+            color: #fff;
         }
 
         .affil-title {
-            font-size: 0.92rem;
+            font-size: 0.95rem;
             font-weight: 600;
             color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .affil-desc {
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             color: #94a3b8;
+            margin-top: 2px;
+            line-height: 1.4;
+        }
+
+        .link-arrow {
+            font-size: 0.75rem;
+            color: var(--accent-cyan);
+            opacity: 0.7;
         }
 
         footer {
@@ -449,7 +493,8 @@
                 <span>Hydrotechnical & Hydraulic Engineering</span>
             </div>
             <div class="affiliation">
-                Faculty of Civil Engineering (FIN) &bull; Polytechnic University of Tirana (UPT)
+                <a href="https://fin.edu.al" target="_blank" rel="noopener">Faculty of Civil Engineering (FIN)</a> &bull; 
+                <a href="https://upt.al" target="_blank" rel="noopener">Polytechnic University of Tirana (UPT)</a>
             </div>
         </div>
 
@@ -462,80 +507,80 @@
                 <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 Tirana, Albania
             </span>
-            <a href="https://orcid.org/0009-0009-3356-3612" target="_blank" class="pill-link">
+            <a href="https://orcid.org/0009-0009-3356-3612" target="_blank" rel="noopener" class="pill-link">
                 <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-                ORCID Verified
+                ORCID 0009-0009-3356-3612
             </a>
         </div>
     </header>
 
-    <!-- SCIENTIFIC PROFILE -->
+    <!-- SCIENTIFIC FOCUS -->
     <div class="section-header">
         <h2>Scientific & Applied Research Focus</h2>
         <div class="line"></div>
     </div>
     <div class="focus-box">
-        Specializing in advanced <strong>Hydrotechnical Engineering</strong>, fluid dynamics, and catchment hydrology. Primary research centers on experimental and hydraulic evaluation of the <strong>Runoff Coefficient (&alpha;)</strong>, urban flood mitigation mechanics, sustainable stormwater drainage systems (SuDS), and resilient hydraulic infrastructure. Committed to high-integrity open engineering standards and scientific cross-validation.
+        Specializing in advanced <strong>Hydrotechnical Engineering</strong>, fluid dynamics, and catchment hydrology. Primary research centers on experimental and hydraulic evaluation of the <strong>Runoff Coefficient (&alpha;)</strong>, urban flood mitigation mechanics, sustainable stormwater drainage systems (SuDS), and resilient hydraulic infrastructure. Active voter and affiliate within global hydro-environment technical committees.
     </div>
 
-    <!-- VERIFIED IDENTIFIERS (GLASS CARDS) -->
+    <!-- VERIFIED IDENTIFIERS (ALL CLICKABLE CARDS) -->
     <div class="section-header">
         <h2>Verified Scientific Registries & Networks</h2>
         <div class="line"></div>
     </div>
     <div class="identifiers-grid">
-        <a href="https://orcid.org/0009-0009-3356-3612" target="_blank" class="id-card">
+        <a href="https://orcid.org/0009-0009-3356-3612" target="_blank" rel="noopener" class="id-card">
             <div class="id-header">
-                <span class="id-name">ORCID iD</span>
+                <span class="id-name">ORCID iD <span class="link-arrow">↗</span></span>
                 <span class="id-tag">Canonical Registry</span>
             </div>
             <div class="id-value">0009-0009-3356-3612</div>
         </a>
 
-        <div class="id-card">
+        <a href="https://www.webofscience.com/wos/author/record/RHZ-2955-2026" target="_blank" rel="noopener" class="id-card">
             <div class="id-header">
-                <span class="id-name">Web of Science</span>
+                <span class="id-name">Web of Science <span class="link-arrow">↗</span></span>
                 <span class="id-tag">Clarivate</span>
             </div>
             <div class="id-value">ResearcherID: RHZ-2955-2026</div>
-        </div>
+        </a>
 
-        <div class="id-card">
+        <a href="https://www.researchgate.net/profile/Holden-Lako" target="_blank" rel="noopener" class="id-card">
             <div class="id-header">
-                <span class="id-name">ResearchGate</span>
+                <span class="id-name">ResearchGate <span class="link-arrow">↗</span></span>
                 <span class="id-tag" style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);">Verified Badge</span>
             </div>
             <div class="id-value">Holden Lako &bull; M.Sc. FIN</div>
-        </div>
+        </a>
 
-        <div class="id-card">
+        <a href="https://www.iahr.org" target="_blank" rel="noopener" class="id-card">
             <div class="id-header">
-                <span class="id-name">IAHR International</span>
-                <span class="id-tag">Global Member</span>
+                <span class="id-name">IAHR International <span class="link-arrow">↗</span></span>
+                <span class="id-tag">Voting Member</span>
             </div>
             <div class="id-value">Member ID: 106138</div>
-        </div>
+        </a>
 
-        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=13683808" target="_blank" class="id-card">
+        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=13683808" target="_blank" rel="noopener" class="id-card">
             <div class="id-header">
-                <span class="id-name">Elsevier / SSRN</span>
+                <span class="id-name">Elsevier / SSRN <span class="link-arrow">↗</span></span>
                 <span class="id-tag">Author Profile</span>
             </div>
             <div class="id-value">Author ID: 13683808</div>
         </a>
 
-        <div class="id-card">
+        <a href="https://scholar.google.com/citations?user=holdenlako" target="_blank" rel="noopener" class="id-card">
             <div class="id-header">
-                <span class="id-name">Google Scholar</span>
-                <span class="id-tag">Verified Domain</span>
+                <span class="id-name">Google Scholar <span class="link-arrow">↗</span></span>
+                <span class="id-tag">fin.edu.al Verified</span>
             </div>
-            <div class="id-value">fin.edu.al Verified Account</div>
-        </div>
+            <div class="id-value">Institutional Scholar Profile</div>
+        </a>
     </div>
 
     <!-- SELECTED PUBLICATIONS -->
     <div class="section-header">
-        <h2>Scientific Publications & Engineering Reports</h2>
+        <h2>Scientific Publications & Technical Reports</h2>
         <div class="line"></div>
     </div>
 
@@ -547,7 +592,7 @@
         <h3 class="pub-title">Technical Investigation and Hydraulic Evaluation of the Runoff Coefficient (&alpha;)</h3>
         <p class="pub-authors">Dipl. Ing. Holden Lako &bull; Faculty of Civil Engineering, UPT</p>
         <div class="pub-actions">
-            <a href="https://doi.org/10.5281/zenodo.23473397" target="_blank" class="btn btn-primary">
+            <a href="https://doi.org/10.5281/zenodo.23473397" target="_blank" rel="noopener" class="btn btn-primary">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 Access Paper (DOI)
             </a>
@@ -558,52 +603,102 @@
         </div>
     </div>
 
-    <!-- AFFILIATIONS & LEADERSHIP -->
+    <!-- IAHR TECHNICAL COMMITTEES & GLOBAL AFFILIATIONS (ALL CLICKABLE) -->
     <div class="section-header">
-        <h2>Professional Affiliations & Global Credentials</h2>
+        <h2>IAHR Technical Committees & Global Credentials</h2>
         <div class="line"></div>
     </div>
 
     <div class="affil-grid">
-        <div class="affil-item">
-            <div class="affil-icon">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+        <!-- IAHR / IWA Urban Drainage -->
+        <a href="https://jcud.org" target="_blank" rel="noopener" class="affil-link">
+            <div class="affil-item">
+                <div class="affil-icon">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                </div>
+                <div>
+                    <div class="affil-title">
+                        IAHR/IWA Urban Drainage <span class="link-arrow">↗</span>
+                    </div>
+                    <div class="affil-desc"><strong>Primary Affiliation:</strong> Joint Committee on Urban Drainage (JCUD)</div>
+                </div>
             </div>
-            <div>
-                <div class="affil-title">IAHR International</div>
-                <div class="affil-desc">Hydro-Environment Engineering & Research</div>
-            </div>
-        </div>
+        </a>
 
-        <div class="affil-item">
-            <div class="affil-icon">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <!-- IAHR Flood Risk Management -->
+        <a href="https://www.iahr.org" target="_blank" rel="noopener" class="affil-link">
+            <div class="affil-item">
+                <div class="affil-icon">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <div>
+                    <div class="affil-title">
+                        Flood Risk Management <span class="link-arrow">↗</span>
+                    </div>
+                    <div class="affil-desc"><strong>Secondary Affiliation:</strong> IAHR Committee on Flood Mitigation & Hydraulics</div>
+                </div>
             </div>
-            <div>
-                <div class="affil-title">UNICEF (WASH)</div>
-                <div class="affil-desc">Water, Sanitation & Hygiene Certified</div>
-            </div>
-        </div>
+        </a>
 
-        <div class="affil-item">
-            <div class="affil-icon">
-                <svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <!-- UNICEF WASH -->
+        <a href="https://www.unicef.org/wash" target="_blank" rel="noopener" class="affil-link">
+            <div class="affil-item">
+                <div class="affil-icon">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div>
+                    <div class="affil-title">
+                        UNICEF (WASH) <span class="link-arrow">↗</span>
+                    </div>
+                    <div class="affil-desc">Water, Sanitation & Hygiene Certified Standards</div>
+                </div>
             </div>
-            <div>
-                <div class="affil-title">Engineers Without Borders UK</div>
-                <div class="affil-desc">Engineering for Global Challenges</div>
-            </div>
-        </div>
+        </a>
 
-        <div class="affil-item">
-            <div class="affil-icon">
-                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        <!-- Engineers Without Borders UK -->
+        <a href="https://www.ewb-uk.org" target="_blank" rel="noopener" class="affil-link">
+            <div class="affil-item">
+                <div class="affil-icon">
+                    <svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <div>
+                    <div class="affil-title">
+                        Engineers Without Borders UK <span class="link-arrow">↗</span>
+                    </div>
+                    <div class="affil-desc">Engineering for Global Challenges & Resilience</div>
+                </div>
             </div>
-            <div>
-                <div class="affil-title">Global Shapers Community</div>
-                <div class="affil-desc">World Economic Forum Initiative Candidate</div>
+        </a>
+
+        <!-- Global Shapers Community -->
+        <a href="https://www.globalshapers.org" target="_blank" rel="noopener" class="affil-link">
+            <div class="affil-item">
+                <div class="affil-icon">
+                    <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <div>
+                    <div class="affil-title">
+                        Global Shapers Community <span class="link-arrow">↗</span>
+                    </div>
+                    <div class="affil-desc">World Economic Forum (WEF) Initiative Candidate</div>
+                </div>
             </div>
-        </div>
+        </a>
+
+        <!-- TED Public Profile -->
+        <a href="https://www.ted.com" target="_blank" rel="noopener" class="affil-link">
+            <div class="affil-item">
+                <div class="affil-icon">
+                    <svg class="icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+                <div>
+                    <div class="affil-title">
+                        TED Knowledge Community <span class="link-arrow">↗</span>
+                    </div>
+                    <div class="affil-desc">Verified Public Bio & Open Science Thought Leadership</div>
+                </div>
+            </div>
+        </a>
     </div>
 
     <!-- FOOTER -->
