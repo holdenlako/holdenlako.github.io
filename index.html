@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ing. Holden Lako | Hydrotechnical & Hydraulic Engineering</title>
-    <meta name="description" content="Official academic portfolio of Ing. Holden Lako, Hydrotechnical Engineering specialist and researcher at Polytechnic University of Tirana.">
+    <title>Dipl. Ing. Holden Lako | Hydrotechnical & Hydraulic Engineering</title>
+    <meta name="description" content="Official academic portfolio of Dipl. Ing. Holden Lako, Hydrotechnical Engineering specialist and researcher at Polytechnic University of Tirana.">
     <meta name="author" content="Holden Lako">
 
     <!-- Fonts: Inter & JetBrains Mono -->
@@ -18,7 +18,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Holden Lako",
-      "honorificPrefix": "Ing.",
+      "honorificPrefix": "Dipl. Ing.",
       "jobTitle": "Hydrotechnical Engineer & Water Resources Researcher",
       "worksFor": {
         "@type": "CollegeOrUniversity",
@@ -36,7 +36,30 @@
         "https://www.researchgate.net/profile/Holden-Lako",
         "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=13683808",
         "https://doi.org/10.5281/zenodo.23473397",
+        "https://doi.org/10.5281/zenodo.23511636",
         "https://www.iahr.org"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Hydraulic Modeling with HEC-RAS",
+          "credentialCategory": "Professional Certificate",
+          "recognizedBy": [
+            {
+              "@type": "Organization",
+              "name": "UNESCO",
+              "url": "https://www.unesco.org"
+            },
+            {
+              "@type": "GovernmentOrganization",
+              "name": "US Army Corps of Engineers (USACE)",
+              "url": "https://www.usace.army.mil"
+            }
+          ],
+          "identifier": "517ba4378b7c4332b74fcd4df8678ef2",
+          "url": "https://openlearning.unesco.org/certificates/517ba4378b7c4332b74fcd4df8678ef2",
+          "dateCreated": "2026-10-22"
+        }
       ]
     }
     </script>
@@ -290,8 +313,8 @@
             color: #e2e8f0;
         }
 
-        /* Publications Card */
-        .pub-card {
+        /* Publications & Credential Cards */
+        .pub-card, .cert-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 12px;
@@ -302,7 +325,7 @@
             transition: all 0.3s ease;
         }
 
-        .pub-card:hover {
+        .pub-card:hover, .cert-card:hover {
             border-color: var(--card-hover-border);
             box-shadow: 0 12px 35px -8px rgba(37, 99, 235, 0.25);
         }
@@ -313,6 +336,7 @@
             gap: 12px;
             margin-bottom: 12px;
             font-size: 0.8rem;
+            flex-wrap: wrap;
         }
 
         .pub-venue {
@@ -328,6 +352,30 @@
             border-radius: 4px;
             color: #cbd5e1;
             font-family: 'JetBrains Mono', monospace;
+        }
+
+        .cert-id-badge {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--accent-cyan);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+        }
+
+        .verified-badge {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .pub-title {
@@ -603,9 +651,37 @@
         </div>
     </div>
 
+    <!-- VERIFIED PROFESSIONAL CREDENTIALS & LICENSES -->
+    <div class="section-header">
+        <h2>Verified Professional Credentials & Certifications</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="cert-card">
+        <div class="pub-meta-top">
+            <span class="pub-venue">UNESCO &bull; In Cooperation with US Army Corps of Engineers (USACE)</span>
+            <span class="verified-badge">&#10003; Officially Verified</span>
+            <span class="cert-id-badge">ID: 517ba4378b7c4332b74fcd4df8678ef2</span>
+        </div>
+        <h3 class="pub-title">Hydraulic Modeling with HEC-RAS (2D Unsteady Flow)</h3>
+        <p class="pub-authors">
+            <strong>Certified Recipient:</strong> Dipl. Ing. Holden Lako &bull; <strong>Issued:</strong> October 2026 &bull; 
+            <strong>Specialization:</strong> 2D Shallow Water Equations (SWE), Subgrid Bathymetry, Hydraulic Structures & Dam/Levee Breach Dynamics.
+        </p>
+        <div class="pub-actions">
+            <a href="https://openlearning.unesco.org/certificates/517ba4378b7c4332b74fcd4df8678ef2" target="_blank" rel="noopener" class="btn btn-primary">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Verify on UNESCO Portal
+            </a>
+            <a href="https://openlearning.unesco.org/courses/course-v1:USACE+HECRAS01+2026/about" target="_blank" rel="noopener" class="btn btn-outline">
+                Curriculum & Details
+            </a>
+        </div>
+    </div>
+
     <!-- IAHR TECHNICAL COMMITTEES & GLOBAL AFFILIATIONS (ALL CLICKABLE) -->
     <div class="section-header">
-        <h2>IAHR Technical Committees & Global Credentials</h2>
+        <h2>IAHR Technical Committees & Global Affiliations</h2>
         <div class="line"></div>
     </div>
 
