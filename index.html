@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dipl. Ing. Holden Lako | Hydrotechnical & Hydraulic Engineering</title>
-    <meta name="description" content="Official academic portfolio of Dipl. Ing. Holden Lako, Hydrotechnical Engineering specialist and researcher at Polytechnic University of Tirana.">
+    <title>Ing. Holden Lako | Hydrotechnical & Hydraulic Engineering</title>
+    <meta name="description" content="Official academic portfolio of Ing. Holden Lako, Hydrotechnical Engineering specialist and researcher at Polytechnic University of Tirana.">
     <meta name="author" content="Holden Lako">
 
     <!-- Fonts: Inter & JetBrains Mono -->
@@ -18,7 +18,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Holden Lako",
-      "honorificPrefix": "Dipl. Ing.",
+      "honorificPrefix": "Ing.",
       "jobTitle": "Hydrotechnical Engineer & Water Resources Researcher",
       "worksFor": {
         "@type": "CollegeOrUniversity",
@@ -39,6 +39,7 @@
         "https://doi.org/10.5281/zenodo.23473397",
         "https://doi.org/10.5281/zenodo.23511636",
         "https://doi.org/10.5281/zenodo.23597716",
+        "https://doi.org/10.5281/zenodo.23604125",
         "https://www.iahr.org"
       ],
       "hasCredential": [
@@ -75,6 +76,20 @@
           },
           "identifier": "10.5281/zenodo.23597716",
           "url": "https://doi.org/10.5281/zenodo.23597716",
+          "dateCreated": "2026-10-23"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Fundamentals of Remote Sensing",
+          "credentialCategory": "Professional Certificate",
+          "recognizedBy": {
+            "@type": "GovernmentOrganization",
+            "name": "National Aeronautics and Space Administration (NASA)",
+            "alternateName": "NASA ARSET",
+            "sameAs": "https://www.wikidata.org/wiki/Q23547"
+          },
+          "identifier": "10.5281/zenodo.23604125",
+          "url": "https://doi.org/10.5281/zenodo.23604125",
           "dateCreated": "2026-10-23"
         }
       ]
@@ -336,7 +351,7 @@
             border: 1px solid var(--card-border);
             border-radius: 12px;
             padding: 28px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             position: relative;
             backdrop-filter: blur(12px);
             transition: all 0.3s ease;
@@ -345,6 +360,46 @@
         .pub-card:hover, .cert-card:hover {
             border-color: var(--card-hover-border);
             box-shadow: 0 12px 35px -8px rgba(37, 99, 235, 0.25);
+        }
+
+        /* Credential Card with Institutional Logo */
+        .cert-card-layout {
+            display: flex;
+            gap: 22px;
+            align-items: flex-start;
+        }
+
+        .cert-logo-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            flex-shrink: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .cert-card:hover .cert-logo-box {
+            transform: scale(1.05);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        }
+
+        .cert-logo-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+
+        .cert-body {
+            flex-grow: 1;
         }
 
         .pub-meta-top {
@@ -538,6 +593,8 @@
         @media (max-width: 768px) {
             .hero-title-group h1 { font-size: 2.1rem; }
             .container { padding: 40px 18px; }
+            .cert-card-layout { flex-direction: column; gap: 16px; }
+            .cert-logo-box { width: 52px; height: 52px; }
         }
     </style>
 </head>
@@ -553,7 +610,7 @@
         </div>
 
         <div class="hero-title-group">
-            <h1>Dipl. Ing. Holden Lako</h1>
+            <h1>Ing. Holden Lako</h1>
             <div class="role">
                 <span>Hydrotechnical & Hydraulic Engineering</span>
             </div>
@@ -655,7 +712,7 @@
             <span class="pub-doi-badge">DOI 10.5281/zenodo.23473397</span>
         </div>
         <h3 class="pub-title">Technical Investigation and Hydraulic Evaluation of the Runoff Coefficient (&alpha;)</h3>
-        <p class="pub-authors">Dipl. Ing. Holden Lako &bull; Faculty of Civil Engineering, UPT</p>
+        <p class="pub-authors">Ing. Holden Lako &bull; Faculty of Civil Engineering, UPT</p>
         <div class="pub-actions">
             <a href="https://doi.org/10.5281/zenodo.23473397" target="_blank" rel="noopener" class="btn btn-primary">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
@@ -674,49 +731,93 @@
         <div class="line"></div>
     </div>
 
-    <!-- UNESCO & USACE Credential Card -->
+    <!-- 1. UNESCO & USACE Credential Card -->
     <div class="cert-card">
-        <div class="pub-meta-top">
-            <span class="pub-venue">UNESCO &bull; In Cooperation with US Army Corps of Engineers (USACE)</span>
-            <span class="verified-badge">&#10003; Officially Verified</span>
-            <span class="cert-id-badge">ID: 517ba4378b7c4332b74fcd4df8678ef2</span>
-        </div>
-        <h3 class="pub-title">Hydraulic Modeling with HEC-RAS (2D Unsteady Flow)</h3>
-        <p class="pub-authors">
-            <strong>Certified Recipient:</strong> Dipl. Ing. Holden Lako &bull; <strong>Issued:</strong> October 2026 &bull; 
-            <strong>Specialization:</strong> 2D Shallow Water Equations (SWE), Subgrid Bathymetry, Hydraulic Structures & Dam/Levee Breach Dynamics.
-        </p>
-        <div class="pub-actions">
-            <a href="https://openlearning.unesco.org/certificates/517ba4378b7c4332b74fcd4df8678ef2" target="_blank" rel="noopener" class="btn btn-primary">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                Verify on UNESCO Portal
-            </a>
-            <a href="https://openlearning.unesco.org/courses/course-v1:USACE+HECRAS01+2026/about" target="_blank" rel="noopener" class="btn btn-outline">
-                Curriculum & Details
-            </a>
+        <div class="cert-card-layout">
+            <div class="cert-logo-box" title="UNESCO & US Army Corps of Engineers">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/UNESCO_white_logo.svg" alt="UNESCO Logo" class="cert-logo-img" referrerpolicy="no-referrer">
+            </div>
+            <div class="cert-body">
+                <div class="pub-meta-top">
+                    <span class="pub-venue">UNESCO &bull; In Cooperation with US Army Corps of Engineers (USACE)</span>
+                    <span class="verified-badge">&#10003; Officially Verified</span>
+                    <span class="cert-id-badge">ID: 517ba4378b7c4332b74fcd4df8678ef2</span>
+                </div>
+                <h3 class="pub-title">Hydraulic Modeling with HEC-RAS (2D Unsteady Flow)</h3>
+                <p class="pub-authors">
+                    <strong>Certified Recipient:</strong> Ing. Holden Lako &bull; <strong>Issued:</strong> October 2026 &bull; 
+                    <strong>Specialization:</strong> 2D Shallow Water Equations (SWE), Subgrid Bathymetry, Hydraulic Structures & Dam/Levee Breach Dynamics.
+                </p>
+                <div class="pub-actions">
+                    <a href="https://openlearning.unesco.org/certificates/517ba4378b7c4332b74fcd4df8678ef2" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        Verify on UNESCO Portal
+                    </a>
+                    <a href="https://openlearning.unesco.org/courses/course-v1:USACE+HECRAS01+2026/about" target="_blank" rel="noopener" class="btn btn-outline">
+                        Curriculum & Details
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- United Nations University (UNU-IAS) Credential Card -->
+    <!-- 2. United Nations University (UNU-IAS) Credential Card -->
     <div class="cert-card">
-        <div class="pub-meta-top">
-            <span class="pub-venue">United Nations University &bull; Institute for the Advanced Study of Sustainability (UNU-IAS)</span>
-            <span class="verified-badge">&#10003; Officially Verified</span>
-            <span class="cert-id-badge">DOI: 10.5281/zenodo.23597716</span>
+        <div class="cert-card-layout">
+            <div class="cert-logo-box" title="United Nations University">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/UN_emblem_blue.svg" alt="United Nations University Logo" class="cert-logo-img" referrerpolicy="no-referrer">
+            </div>
+            <div class="cert-body">
+                <div class="pub-meta-top">
+                    <span class="pub-venue">United Nations University &bull; Institute for the Advanced Study of Sustainability (UNU-IAS)</span>
+                    <span class="verified-badge">&#10003; Officially Verified</span>
+                    <span class="cert-id-badge">DOI: 10.5281/zenodo.23597716</span>
+                </div>
+                <h3 class="pub-title">Net Zero 101: What, Why and How (Climate Policy & Decarbonization)</h3>
+                <p class="pub-authors">
+                    <strong>Certified Recipient:</strong> Ing. Holden Lako &bull; <strong>Issued:</strong> October 2026 &bull; <strong>Signatory:</strong> Prof. Shinobu Yamaguchi, Director UNU-IAS &bull; 
+                    <strong>Specialization:</strong> Greenhouse Gas Accounting (CO2eq), UNFCCC Paris Agreement NDC Frameworks, Sectoral Decarbonization & Climate Adaptation Resilience.
+                </p>
+                <div class="pub-actions">
+                    <a href="https://doi.org/10.5281/zenodo.23597716" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        Verify Credential (CERN / Zenodo DOI)
+                    </a>
+                    <a href="https://ias.unu.edu" target="_blank" rel="noopener" class="btn btn-outline">
+                        UNU-IAS Institutional Portal
+                    </a>
+                </div>
+            </div>
         </div>
-        <h3 class="pub-title">Net Zero 101: What, Why and How (Climate Policy & Decarbonization)</h3>
-        <p class="pub-authors">
-            <strong>Certified Recipient:</strong> Dipl. Ing. Holden Lako &bull; <strong>Issued:</strong> October 2026 &bull; <strong>Signatory:</strong> Prof. Shinobu Yamaguchi, Director UNU-IAS &bull; 
-            <strong>Specialization:</strong> Greenhouse Gas Accounting (CO2eq), UNFCCC Paris Agreement NDC Frameworks, Sectoral Decarbonization & Climate Adaptation Resilience.
-        </p>
-        <div class="pub-actions">
-            <a href="https://doi.org/10.5281/zenodo.23597716" target="_blank" rel="noopener" class="btn btn-primary">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                Verify Credential (CERN / Zenodo DOI)
-            </a>
-            <a href="https://ias.unu.edu" target="_blank" rel="noopener" class="btn btn-outline">
-                UNU-IAS Institutional Portal
-            </a>
+    </div>
+
+    <!-- 3. NASA (ARSET) Credential Card -->
+    <div class="cert-card">
+        <div class="cert-card-layout">
+            <div class="cert-logo-box" title="National Aeronautics and Space Administration (NASA)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA Insignia Logo" class="cert-logo-img" referrerpolicy="no-referrer">
+            </div>
+            <div class="cert-body">
+                <div class="pub-meta-top">
+                    <span class="pub-venue">NASA &bull; Applied Remote Sensing Training Program (ARSET)</span>
+                    <span class="verified-badge">&#10003; Officially Verified</span>
+                    <span class="cert-id-badge">DOI: 10.5281/zenodo.23604125</span>
+                </div>
+                <h3 class="pub-title">Fundamentals of Remote Sensing</h3>
+                <p class="pub-authors">
+                    <strong>Certified Recipient:</strong> Ing. Holden Lako &bull; <strong>Issued:</strong> October 2026 &bull; <strong>Issuing Agency:</strong> National Aeronautics and Space Administration (NASA) &bull; 
+                    <strong>Specialization:</strong> Satellite Orbits & Sensors (Active/Passive SAR), Electromagnetic Radiation Physics, Atmospheric Windows, Spatial/Spectral Resolutions & Earth Observation for Water Resources.
+                </p>
+                <div class="pub-actions">
+                    <a href="https://doi.org/10.5281/zenodo.23604125" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        Verify Credential (CERN / Zenodo DOI)
+                    </a>
+                    <a href="https://appliedsciences.nasa.gov/what-we-do/capacity-building/arset" target="_blank" rel="noopener" class="btn btn-outline">
+                        NASA ARSET Program Details
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -802,7 +903,7 @@
             </div>
         </a>
 
-        <!-- TED Public Profile -->
+        <!-- TED Knowledge Community -->
         <a href="https://www.ted.com" target="_blank" rel="noopener" class="affil-link">
             <div class="affil-item">
                 <div class="affil-icon">
@@ -820,7 +921,7 @@
 
     <!-- FOOTER -->
     <footer>
-        &copy; 2026 Dipl. Ing. Holden Lako &bull; Faculty of Civil Engineering &bull; Polytechnic University of Tirana
+        &copy; 2026 Ing. Holden Lako &bull; Faculty of Civil Engineering &bull; Polytechnic University of Tirana
     </footer>
 
 </div>
