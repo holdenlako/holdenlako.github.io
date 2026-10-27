@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ing. Holden Lako | Hydrotechnical & Hydraulic Engineering</title>
-    <meta name="description" content="Official academic portfolio of Ing. Holden Lako, Hydrotechnical Engineering specialist and researcher at Polytechnic University of Tirana.">
+    <meta name="description" content="Official academic portfolio of Ing. Holden Lako, Hydrotechnical Engineering specialist and researcher at Polytechnic University of Tirana. Verified credentials from NASA, UNESCO, and UNU-IAS.">
     <meta name="author" content="Holden Lako">
+    <link rel="canonical" href="https://holdenlako.github.io/">
+
+    <!-- Open Graph for High-Trust Crawlers -->
+    <meta property="og:title" content="Ing. Holden Lako | Hydrotechnical & Hydraulic Engineering">
+    <meta property="og:description" content="Official academic repository & verified portfolio of Ing. Holden Lako, Polytechnic University of Tirana.">
+    <meta property="og:url" content="https://holdenlako.github.io/">
+    <meta property="og:type" content="profile">
 
     <!-- Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,16 +24,24 @@
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://holdenlako.github.io/#person",
+      "url": "https://holdenlako.github.io/",
+      "mainEntityOfPage": "https://holdenlako.github.io/",
       "name": "Holden Lako",
+      "givenName": "Holden",
+      "familyName": "Lako",
       "honorificPrefix": "Ing.",
+      "disambiguatingDescription": "Albanian hydrotechnical engineer, hydraulic modeling specialist, and researcher at Polytechnic University of Tirana (UPT). Specializing in Runoff Coefficient dynamics, HEC-RAS 2D modeling, and satellite remote sensing. Distinct from any musical or media figures.",
       "jobTitle": "Hydrotechnical Engineer & Water Resources Researcher",
       "worksFor": {
         "@type": "CollegeOrUniversity",
-        "name": "Polytechnic University of Tirana"
+        "name": "Polytechnic University of Tirana",
+        "url": "https://upt.al"
       },
       "alumniOf": {
         "@type": "CollegeOrUniversity",
-        "name": "Faculty of Civil Engineering, Polytechnic University of Tirana"
+        "name": "Faculty of Civil Engineering, Polytechnic University of Tirana",
+        "url": "https://fin.edu.al"
       },
       "email": "mailto:holden.lako@fin.edu.al",
       "sameAs": [
@@ -122,7 +137,6 @@
             position: relative;
         }
 
-        /* Ambient Fluid Glow Background */
         body::before {
             content: "";
             position: fixed;
@@ -143,7 +157,6 @@
             padding: 60px 24px 100px;
         }
 
-        /* Hero Header */
         .hero {
             display: flex;
             flex-direction: column;
@@ -244,7 +257,6 @@
             transform: translateY(-2px);
         }
 
-        /* Section Headings */
         .section-header {
             display: flex;
             align-items: center;
@@ -267,7 +279,6 @@
             background: linear-gradient(to right, rgba(56, 189, 248, 0.3), transparent);
         }
 
-        /* Research Pillars */
         .focus-box {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
@@ -279,7 +290,6 @@
             line-height: 1.7;
         }
 
-        /* Identifiers Grid - ALL CLICKABLE */
         .identifiers-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -345,7 +355,6 @@
             color: #e2e8f0;
         }
 
-        /* Publications & Credential Cards */
         .pub-card, .cert-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
@@ -362,7 +371,6 @@
             box-shadow: 0 12px 35px -8px rgba(37, 99, 235, 0.25);
         }
 
-        /* Credential Card with Institutional Logo */
         .cert-card-layout {
             display: flex;
             gap: 22px;
@@ -506,7 +514,6 @@
             color: #fff;
         }
 
-        /* Affiliations Grid - ALL CLICKABLE */
         .affil-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -587,7 +594,6 @@
             color: #64748b;
         }
 
-        /* SVG Icons Inline */
         .icon { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; }
 
         @media (max-width: 768px) {
@@ -629,7 +635,7 @@
                 <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 Tirana, Albania
             </span>
-            <a href="https://orcid.org/0009-0009-3356-3612" target="_blank" rel="noopener" class="pill-link">
+            <a href="https://orcid.org/0009-0009-3356-3612" target="_blank" rel="me noopener" class="pill-link">
                 <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
                 ORCID 0009-0009-3356-3612
             </a>
@@ -645,13 +651,21 @@
         Specializing in advanced <strong>Hydrotechnical Engineering</strong>, fluid dynamics, and catchment hydrology. Primary research centers on experimental and hydraulic evaluation of the <strong>Runoff Coefficient (&alpha;)</strong>, urban flood mitigation mechanics, sustainable stormwater drainage systems (SuDS), and resilient hydraulic infrastructure. Active voter and affiliate within global hydro-environment technical committees.
     </div>
 
-    <!-- VERIFIED IDENTIFIERS (ALL CLICKABLE CARDS) -->
+    <!-- VERIFIED IDENTIFIERS (ALL WITH rel="me" FOR CANONICAL PAGERANK) -->
     <div class="section-header">
         <h2>Verified Scientific Registries & Networks</h2>
         <div class="line"></div>
     </div>
     <div class="identifiers-grid">
-        <a href="https://orcid.org/0009-0009-3356-3612" target="_blank" rel="noopener" class="id-card">
+        <a href="https://www.wikidata.org/wiki/Q141810016" target="_blank" rel="me noopener" class="id-card">
+            <div class="id-header">
+                <span class="id-name">Wikidata Entity <span class="link-arrow">↗</span></span>
+                <span class="id-tag">Semantic Web</span>
+            </div>
+            <div class="id-value">Item: Q141810016</div>
+        </a>
+
+        <a href="https://orcid.org/0009-0009-3356-3612" target="_blank" rel="me noopener" class="id-card">
             <div class="id-header">
                 <span class="id-name">ORCID iD <span class="link-arrow">↗</span></span>
                 <span class="id-tag">Canonical Registry</span>
@@ -659,7 +673,23 @@
             <div class="id-value">0009-0009-3356-3612</div>
         </a>
 
-        <a href="https://www.webofscience.com/wos/author/record/RHZ-2955-2026" target="_blank" rel="noopener" class="id-card">
+        <a href="https://www.researchgate.net/profile/Holden-Lako" target="_blank" rel="me noopener" class="id-card">
+            <div class="id-header">
+                <span class="id-name">ResearchGate <span class="link-arrow">↗</span></span>
+                <span class="id-tag" style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);">Verified Badge</span>
+            </div>
+            <div class="id-value">Holden Lako &bull; M.Sc. FIN / UPT</div>
+        </a>
+
+        <a href="https://scholar.google.com/citations?user=holdenlako" target="_blank" rel="me noopener" class="id-card">
+            <div class="id-header">
+                <span class="id-name">Google Scholar <span class="link-arrow">↗</span></span>
+                <span class="id-tag">fin.edu.al Verified</span>
+            </div>
+            <div class="id-value">Holden Lako &bull; Scholar Profile</div>
+        </a>
+
+        <a href="https://www.webofscience.com/wos/author/record/RHZ-2955-2026" target="_blank" rel="me noopener" class="id-card">
             <div class="id-header">
                 <span class="id-name">Web of Science <span class="link-arrow">↗</span></span>
                 <span class="id-tag">Clarivate</span>
@@ -667,12 +697,12 @@
             <div class="id-value">ResearcherID: RHZ-2955-2026</div>
         </a>
 
-        <a href="https://www.researchgate.net/profile/Holden-Lako" target="_blank" rel="noopener" class="id-card">
+        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=13683808" target="_blank" rel="me noopener" class="id-card">
             <div class="id-header">
-                <span class="id-name">ResearchGate <span class="link-arrow">↗</span></span>
-                <span class="id-tag" style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);">Verified Badge</span>
+                <span class="id-name">Elsevier / SSRN <span class="link-arrow">↗</span></span>
+                <span class="id-tag">Author Profile</span>
             </div>
-            <div class="id-value">Holden Lako &bull; M.Sc. FIN</div>
+            <div class="id-value">Author ID: 13683808</div>
         </a>
 
         <a href="https://www.iahr.org" target="_blank" rel="noopener" class="id-card">
@@ -682,50 +712,55 @@
             </div>
             <div class="id-value">Member ID: 106138</div>
         </a>
-
-        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=13683808" target="_blank" rel="noopener" class="id-card">
-            <div class="id-header">
-                <span class="id-name">Elsevier / SSRN <span class="link-arrow">↗</span></span>
-                <span class="id-tag">Author Profile</span>
-            </div>
-            <div class="id-value">Author ID: 13683808</div>
-        </a>
-
-        <a href="https://scholar.google.com/citations?user=holdenlako" target="_blank" rel="noopener" class="id-card">
-            <div class="id-header">
-                <span class="id-name">Google Scholar <span class="link-arrow">↗</span></span>
-                <span class="id-tag">fin.edu.al Verified</span>
-            </div>
-            <div class="id-value">Institutional Scholar Profile</div>
-        </a>
     </div>
 
-    <!-- SELECTED PUBLICATIONS -->
+    <!-- SELECTED PUBLICATIONS (BOTH CERN / ZENODO REPOSITORIES) -->
     <div class="section-header">
         <h2>Scientific Publications & Technical Reports</h2>
         <div class="line"></div>
     </div>
 
+    <!-- Publication 1: English Report -->
     <div class="pub-card">
         <div class="pub-meta-top">
             <span class="pub-venue">CERN / Zenodo Official Archive</span>
-            <span class="pub-doi-badge">DOI 10.5281/zenodo.23473397</span>
+            <span class="pub-doi-badge">DOI 10.5281/zenodo.23511636</span>
         </div>
         <h3 class="pub-title">Technical Investigation and Hydraulic Evaluation of the Runoff Coefficient (&alpha;)</h3>
-        <p class="pub-authors">Ing. Holden Lako &bull; Faculty of Civil Engineering, UPT</p>
+        <p class="pub-authors">Ing. Holden Lako &bull; Faculty of Civil Engineering, Polytechnic University of Tirana</p>
         <div class="pub-actions">
-            <a href="https://doi.org/10.5281/zenodo.23473397" target="_blank" rel="noopener" class="btn btn-primary">
+            <a href="https://doi.org/10.5281/zenodo.23511636" target="_blank" rel="noopener" class="btn btn-primary">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                Access Paper (DOI)
+                Access Paper (English DOI)
             </a>
-            <button class="btn btn-outline" onclick="copyCitation()">
+            <button class="btn btn-outline" onclick="copyCitationEn()">
                 <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <span id="copyText">Copy Citation</span>
+                <span id="copyTextEn">Copy Citation</span>
             </button>
         </div>
     </div>
 
-    <!-- VERIFIED PROFESSIONAL CREDENTIALS & LICENSES -->
+    <!-- Publication 2: Albanian Monograph -->
+    <div class="pub-card">
+        <div class="pub-meta-top">
+            <span class="pub-venue">CERN / Zenodo Archive</span>
+            <span class="pub-doi-badge">DOI 10.5281/zenodo.23473397</span>
+        </div>
+        <h3 class="pub-title">Hetimi Teknik dhe Vlerësimi Hidraulik i Koeficientit të Rrjedhjes (&alpha;)</h3>
+        <p class="pub-authors">Ing. Holden Lako &bull; Fakulteti i Inxhinierisë së Ndërtimit, Universiteti Politeknik i Tiranës</p>
+        <div class="pub-actions">
+            <a href="https://doi.org/10.5281/zenodo.23473397" target="_blank" rel="noopener" class="btn btn-primary">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Raporti Teknik (Shqip DOI)
+            </a>
+            <button class="btn btn-outline" onclick="copyCitationSq()">
+                <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span id="copyTextSq">Kopjo Citimin</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- VERIFIED PROFESSIONAL CREDENTIALS -->
     <div class="section-header">
         <h2>Verified Professional Credentials & Certifications</h2>
         <div class="line"></div>
@@ -821,14 +856,13 @@
         </div>
     </div>
 
-    <!-- IAHR TECHNICAL COMMITTEES & GLOBAL AFFILIATIONS (ALL CLICKABLE) -->
+    <!-- IAHR COMMITTEES & GLOBAL AFFILIATIONS -->
     <div class="section-header">
         <h2>IAHR Technical Committees & Global Affiliations</h2>
         <div class="line"></div>
     </div>
 
     <div class="affil-grid">
-        <!-- IAHR / IWA Urban Drainage -->
         <a href="https://jcud.org" target="_blank" rel="noopener" class="affil-link">
             <div class="affil-item">
                 <div class="affil-icon">
@@ -843,7 +877,6 @@
             </div>
         </a>
 
-        <!-- IAHR Flood Risk Management -->
         <a href="https://www.iahr.org" target="_blank" rel="noopener" class="affil-link">
             <div class="affil-item">
                 <div class="affil-icon">
@@ -858,7 +891,6 @@
             </div>
         </a>
 
-        <!-- UNICEF WASH -->
         <a href="https://www.unicef.org/wash" target="_blank" rel="noopener" class="affil-link">
             <div class="affil-item">
                 <div class="affil-icon">
@@ -873,7 +905,6 @@
             </div>
         </a>
 
-        <!-- Engineers Without Borders UK -->
         <a href="https://www.ewb-uk.org" target="_blank" rel="noopener" class="affil-link">
             <div class="affil-item">
                 <div class="affil-icon">
@@ -888,7 +919,6 @@
             </div>
         </a>
 
-        <!-- Global Shapers Community -->
         <a href="https://www.globalshapers.org" target="_blank" rel="noopener" class="affil-link">
             <div class="affil-item">
                 <div class="affil-icon">
@@ -903,7 +933,6 @@
             </div>
         </a>
 
-        <!-- TED Knowledge Community -->
         <a href="https://www.ted.com" target="_blank" rel="noopener" class="affil-link">
             <div class="affil-item">
                 <div class="affil-icon">
@@ -927,14 +956,21 @@
 </div>
 
 <script>
-function copyCitation() {
-    const citation = "Lako, H. (2026). Technical Investigation and Hydraulic Evaluation of the Runoff Coefficient (α). Zenodo. https://doi.org/10.5281/zenodo.23473397";
+function copyCitationEn() {
+    const citation = "Lako, H. (2026). Technical Investigation and Hydraulic Evaluation of the Runoff Coefficient (α). Zenodo. https://doi.org/10.5281/zenodo.23511636";
     navigator.clipboard.writeText(citation).then(() => {
-        const copyText = document.getElementById('copyText');
+        const copyText = document.getElementById('copyTextEn');
         copyText.innerText = "Copied to Clipboard!";
-        setTimeout(() => {
-            copyText.innerText = "Copy Citation";
-        }, 2000);
+        setTimeout(() => { copyText.innerText = "Copy Citation"; }, 2000);
+    });
+}
+
+function copyCitationSq() {
+    const citation = "Lako, H. (2026). Hetimi Teknik dhe Vlerësimi Hidraulik i Koeficientit të Rrjedhjes (α). Zenodo. https://doi.org/10.5281/zenodo.23473397";
+    navigator.clipboard.writeText(citation).then(() => {
+        const copyText = document.getElementById('copyTextSq');
+        copyText.innerText = "Citimi u Kopjua!";
+        setTimeout(() => { copyText.innerText = "Kopjo Citimin"; }, 2000);
     });
 }
 </script>
