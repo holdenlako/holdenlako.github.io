@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ing. Holden Lako | Hydrotechnical & Hydraulic Engineering</title>
-    <meta name="description" content="Official academic portfolio of Ing. Holden Lako, Hydrotechnical Engineering specialist and researcher at Polytechnic University of Tirana. Verified credentials from NASA, UNESCO, and UNU-IAS.">
+    <meta name="description" content="Official academic portfolio of Ing. Holden Lako, Hydrotechnical Engineering specialist and researcher at Polytechnic University of Tirana. Verified credentials from Harvard University, NASA, UNESCO, and UNU-IAS.">
     <meta name="author" content="Holden Lako">
     <link rel="canonical" href="https://holdenlako.github.io/">
 
@@ -46,6 +46,8 @@
       "email": "mailto:holden.lako@fin.edu.al",
       "sameAs": [
         "https://www.wikidata.org/wiki/Q141810016",
+        "https://dataverse.harvard.edu/dataverse/holdenlako",
+        "https://doi.org/10.7910/DVN/BVXAZZ",
         "https://orcid.org/0009-0009-3356-3612",
         "https://www.webofscience.com/wos/author/record/RHZ-2955-2026",
         "https://scholar.google.com/citations?user=ZsGh7QkAAAAJ",
@@ -122,6 +124,7 @@
             --accent-cyan: #38bdf8;
             --accent-blue: #2563eb;
             --accent-emerald: #10b981;
+            --accent-crimson: #e11d48;
             --glow: rgba(56, 189, 248, 0.18);
         }
 
@@ -393,7 +396,7 @@
             transition: transform 0.25s ease, border-color 0.25s ease;
         }
 
-        .cert-card:hover .cert-logo-box {
+        .cert-card:hover .cert-logo-box, .pub-card:hover .cert-logo-box {
             transform: scale(1.05);
             border-color: var(--accent-cyan);
             box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
@@ -665,6 +668,15 @@
             <div class="id-value">Item: Q141810016</div>
         </a>
 
+        <!-- Harvard Dataverse Identifier Card -->
+        <a href="https://dataverse.harvard.edu/dataverse/holdenlako" target="_blank" rel="me noopener" class="id-card" style="border-color: rgba(225, 29, 72, 0.35);">
+            <div class="id-header">
+                <span class="id-name">Harvard Dataverse <span class="link-arrow">↗</span></span>
+                <span class="id-tag" style="color: #fb7185; background: rgba(225, 29, 72, 0.12); border-color: rgba(225, 29, 72, 0.35);">harvard.edu Verified</span>
+            </div>
+            <div class="id-value">Holden Lako Research Repository</div>
+        </a>
+
         <a href="https://orcid.org/0009-0009-3356-3612" target="_blank" rel="me noopener" class="id-card">
             <div class="id-header">
                 <span class="id-name">ORCID iD <span class="link-arrow">↗</span></span>
@@ -682,11 +694,11 @@
         </a>
 
         <a href="https://scholar.google.com/citations?user=ZsGh7QkAAAAJ" target="_blank" rel="me noopener" class="id-card">
-               <div class="id-header">
-           <span class="id-name">Google Scholar <span class="link-arrow">↗</span></span>
-           <span class="id-tag">fin.edu.al Verified</span>
-          </div>
-    <div class="id-value">Holden Lako &bull; Scholar Profile</div>
+            <div class="id-header">
+                <span class="id-name">Google Scholar <span class="link-arrow">↗</span></span>
+                <span class="id-tag">fin.edu.al Verified</span>
+            </div>
+            <div class="id-value">Holden Lako &bull; Scholar Profile</div>
         </a>
 
         <a href="https://www.webofscience.com/wos/author/record/RHZ-2955-2026" target="_blank" rel="me noopener" class="id-card">
@@ -714,10 +726,44 @@
         </a>
     </div>
 
-    <!-- SELECTED PUBLICATIONS (BOTH CERN / ZENODO REPOSITORIES) -->
+    <!-- SELECTED PUBLICATIONS & RESEARCH DATASETS -->
     <div class="section-header">
-        <h2>Scientific Publications & Technical Reports</h2>
+        <h2>Scientific Publications & Research Datasets</h2>
         <div class="line"></div>
+    </div>
+
+    <!-- FEATURED: HARVARD UNIVERSITY BENCHMARK DATASET -->
+    <div class="pub-card" style="border-color: rgba(225, 29, 72, 0.35); box-shadow: 0 12px 35px -8px rgba(225, 29, 72, 0.25);">
+        <div class="cert-card-layout">
+            <div class="cert-logo-box" style="border-color: rgba(225, 29, 72, 0.45); background: rgba(20, 10, 15, 0.95);" title="Harvard University">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Harvard_University_coat_of_arms.svg" alt="Harvard University Veritas Shield" class="cert-logo-img" referrerpolicy="no-referrer">
+            </div>
+            <div class="cert-body">
+                <div class="pub-meta-top">
+                    <span class="pub-venue" style="color: #fb7185;">Harvard University &bull; Harvard Dataverse Repository</span>
+                    <span class="verified-badge" style="background: rgba(225, 29, 72, 0.15); color: #fda4af; border-color: rgba(225, 29, 72, 0.35);">&#10003; harvard.edu Indexed</span>
+                    <span class="pub-doi-badge" style="color: #fecdd3; border: 1px solid rgba(225, 29, 72, 0.3);">DOI 10.7910/DVN/BVXAZZ</span>
+                </div>
+                <h3 class="pub-title">Benchmark Dataset on Catchment Runoff Coefficient (&alpha;) for Hydrotechnical Infrastructure</h3>
+                <p class="pub-authors">
+                    <strong>Lead Investigator:</strong> Ing. Holden Lako &bull; <strong>Institutional Repository:</strong> Harvard Dataverse (Harvard University) &bull; 
+                    <strong>Scope:</strong> Empirical computational matrices and governing parameters for catchment runoff dynamics and hydraulic modeling.
+                </p>
+                <div class="pub-actions">
+                    <a href="https://doi.org/10.7910/DVN/BVXAZZ" target="_blank" rel="noopener" class="btn btn-primary" style="background: #be123c; border-color: #e11d48;">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        Access Harvard Dataset (DOI)
+                    </a>
+                    <a href="https://dataverse.harvard.edu/dataverse/holdenlako" target="_blank" rel="noopener" class="btn btn-outline">
+                        Harvard Repository
+                    </a>
+                    <button class="btn btn-outline" onclick="copyCitationHarvard()">
+                        <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <span id="copyTextHarvard">Copy Harvard Citation</span>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Publication 1: English Report -->
@@ -956,6 +1002,15 @@
 </div>
 
 <script>
+function copyCitationHarvard() {
+    const citation = 'Lako, H. (2026). Benchmark Dataset on Catchment Runoff Coefficient (α) for Hydrotechnical Infrastructure. Harvard Dataverse. https://doi.org/10.7910/DVN/BVXAZZ';
+    navigator.clipboard.writeText(citation).then(() => {
+        const copyText = document.getElementById('copyTextHarvard');
+        copyText.innerText = "Copied to Clipboard!";
+        setTimeout(() => { copyText.innerText = "Copy Harvard Citation"; }, 2000);
+    });
+}
+
 function copyCitationEn() {
     const citation = "Lako, H. (2026). Technical Investigation and Hydraulic Evaluation of the Runoff Coefficient (α). Zenodo. https://doi.org/10.5281/zenodo.23511636";
     navigator.clipboard.writeText(citation).then(() => {
