@@ -59,6 +59,8 @@
         "https://doi.org/10.5281/zenodo.23511636",
         "https://doi.org/10.5281/zenodo.23597716",
         "https://doi.org/10.5281/zenodo.23604125",
+        "https://doi.org/10.5281/zenodo.23867165",
+        "https://github.com/holdenlako/hydroalpha",
         "https://www.iahr.org"
       ],
       "hasCredential": [
@@ -786,6 +788,35 @@
         </div>
     </div>
 
+    <!-- FEATURED: SCIENTIFIC RESEARCH SOFTWARE (CERN / ZENODO DOI & GITHUB) -->
+    <div class="pub-card" style="border-left: 4px solid #10b981; border-color: rgba(16, 185, 129, 0.35); box-shadow: 0 12px 35px -8px rgba(16, 185, 129, 0.2);">
+        <div class="pub-meta-top">
+            <span class="pub-venue" style="color: #34d399;">CERN / Zenodo &bull; Open-Source Research Software</span>
+            <span class="verified-badge" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.35);">&#10003; OpenAIRE Indexed</span>
+            <span class="pub-doi-badge" style="color: #a7f3d0; border: 1px solid rgba(16, 185, 129, 0.3);">DOI 10.5281/zenodo.23867165</span>
+            <span class="pub-doi-badge" style="color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">v1.0.0</span>
+        </div>
+        <h3 class="pub-title">hydroalpha: Open-Source Python Engine for Catchment Runoff Coefficient Modeling and Remote Sensing Calibration</h3>
+        <p class="pub-authors">
+            <strong>Principal Architect:</strong> Ing. Holden Lako &bull; <strong>Institutional Affiliation:</strong> Faculty of Civil Engineering, Polytechnic University of Tirana (UPT) &bull; 
+            <strong>Scope:</strong> Computational hydrology library for weighted runoff coefficient dynamics, topographic slope correction, and multispectral Earth observation calibration (Sentinel-2 / Landsat).
+        </p>
+        <div class="pub-actions">
+            <a href="https://doi.org/10.5281/zenodo.23867165" target="_blank" rel="noopener" class="btn btn-primary" style="background: #059669; border-color: #10b981;">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Access Software (CERN DOI)
+            </a>
+            <a href="https://github.com/holdenlako/hydroalpha" target="_blank" rel="noopener" class="btn btn-outline">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub Repository
+            </a>
+            <button class="btn btn-outline" onclick="copyCitationSoftware()">
+                <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span id="copyTextSoftware">Copy Software Citation</span>
+            </button>
+        </div>
+    </div>
+
     <!-- Publication: HAL Open Science French National Archive -->
     <div class="pub-card">
         <div class="pub-meta-top">
@@ -1047,6 +1078,15 @@ function copyCitationHarvard() {
         const copyText = document.getElementById('copyTextHarvard');
         copyText.innerText = "Copied to Clipboard!";
         setTimeout(() => { copyText.innerText = "Copy Harvard Citation"; }, 2000);
+    });
+}
+
+function copyCitationSoftware() {
+    const citation = "Lako, H. (2025). hydroalpha: Open-Source Python Engine for Catchment Runoff Coefficient Modeling and Remote Sensing Calibration (Version v1.0.0). CERN Zenodo. https://doi.org/10.5281/zenodo.23867165";
+    navigator.clipboard.writeText(citation).then(() => {
+        const copyText = document.getElementById('copyTextSoftware');
+        copyText.innerText = "Copied to Clipboard!";
+        setTimeout(() => { copyText.innerText = "Copy Software Citation"; }, 2000);
     });
 }
 
